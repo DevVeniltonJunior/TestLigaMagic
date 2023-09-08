@@ -1,10 +1,15 @@
 <template>
   <div>
-    <SteppyComponent :steps="steps" :currentStep="currentStep" />
+    <div  class="steps">
+      <SteppyComponent :steps="steps" :currentStep="currentStep" />
+    </div>
     <div>
+      <p>test</p>
+    </div>
+    <div class="btn-group">
       <button @click="prevStep" :disabled="currentStep === 0">Anterior</button>
       <button @click="nextStep" :disabled="currentStep === steps.length - 1">Próxima</button>
-      <button @click="nextStep" :disabled="currentStep < steps.length - 1">Enviar</button>
+      <button @click="send" :disabled="currentStep < steps.length - 1">Enviar</button>
     </div>
   </div>
 </template>
@@ -18,7 +23,7 @@ export default {
   },
   data() {
     return {
-      steps: ["Passo 1", "Passo 2", "Passo 3", "Passo 4", "Passo 5"],
+      steps: ["1", "2", "3", "4", "5"],
       currentStep: 0
     };
   },
@@ -36,3 +41,23 @@ export default {
   }
 };
 </script>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.steps {
+  margin-top: -200px;
+}
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+button {
+  padding: 2px 8px;
+}
+</style>
