@@ -4,7 +4,7 @@
       <SteppyComponent :steps="steps" :currentStep="currentStep" />
     </div>
     <div>
-      <p>test</p>
+      <FormatoComponent v-if="currentStep === 0"/>
     </div>
     <div class="btn-group">
       <button @click="prevStep" :disabled="currentStep === 0">Anterior</button>
@@ -15,11 +15,13 @@
 </template>
 
 <script>
+import FormatoComponent from './components/FormatoComponent.vue';
 import SteppyComponent from "./components/SteppyComponent.vue";
 
 export default {
   components: {
-    SteppyComponent
+    SteppyComponent,
+    FormatoComponent
   },
   data() {
     return {
