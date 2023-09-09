@@ -34,7 +34,7 @@ export default {
   },
   data() {
     return {
-      steps: ["1", "2", "3", "4", "5"],
+      steps: ["1", "2", "3", "4"],
       currentStep: 0
     };
   },
