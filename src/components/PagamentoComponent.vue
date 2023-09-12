@@ -1,6 +1,8 @@
 <template>
+<div>
   <label for="nome">Nome:</label>
   <input type="text" id="nome" v-model="nome">
+</div>
 </template>
 
 <script>
@@ -16,6 +18,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 </style>
