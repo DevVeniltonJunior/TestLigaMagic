@@ -15,10 +15,10 @@
       </div>
     </div>
     <div class="content">
-      <FormatoComponent v-if="currentStep === 0"/>
-      <QuestionarioComponent v-if="currentStep === 1"/>
-      <PagamentoComponent v-if="currentStep === 2"/>
-      <TorneioConponent v-if="currentStep === 3"/>
+      <FormatComponent v-if="currentStep === 0"/>
+      <QuizComponent v-if="currentStep === 1"/>
+      <PaymentComponent v-if="currentStep === 2"/>
+      <TournamentConponent v-if="currentStep === 3"/>
     </div>
     <div class="btn-group">
       <button id="back" @click="prevStep" :disabled="currentStep === 0">Anterior</button>
@@ -30,18 +30,18 @@
 
 <script>
 import SteppyComponent from "./components/SteppyComponent.vue";
-import FormatoComponent from './components/FormatoComponent.vue';
-import QuestionarioComponent from './components/QuestionarioComponent.vue'
-import PagamentoComponent from './components/PagamentoComponent.vue';
-import TorneioConponent from './components/TorneioConponent.vue';
+import FormatComponent from './components/FormatComponent.vue';
+import QuizComponent from './components/QuizComponent.vue'
+import PaymentComponent from './components/PaymentComponent.vue';
+import TournamentConponent from './components/TournamentConponent.vue';
 
 export default {
   components: {
     SteppyComponent,
-    FormatoComponent,
-    QuestionarioComponent,
-    PagamentoComponent,
-    TorneioConponent
+    FormatComponent,
+    QuizComponent,
+    PaymentComponent,
+    TournamentConponent
   },
   data() {
     return {
