@@ -21,9 +21,9 @@
       <TorneioConponent v-if="currentStep === 3"/>
     </div>
     <div class="btn-group">
-      <button @click="prevStep" :disabled="currentStep === 0">Anterior</button>
-      <button @click="nextStep" :disabled="currentStep === steps.length - 1">Próxima</button>
-      <button @click="send" :disabled="currentStep < steps.length - 1">Enviar</button>
+      <button id="back" @click="prevStep" :disabled="currentStep === 0">Anterior</button>
+      <button id="foward" @click="nextStep" :disabled="currentStep === steps.length - 1">Próxima</button>
+      <button id="send" @click="send" :disabled="currentStep < steps.length - 1">Enviar</button>
     </div>
   </div>
 </template>
